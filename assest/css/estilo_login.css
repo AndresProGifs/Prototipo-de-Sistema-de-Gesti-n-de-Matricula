@@ -5,7 +5,7 @@ body {
     color: #1b262c;
     margin: 0;
     background-color: white;
-    background-image: url('/assest/img/logo.jpg'); /* Ruta de la imagen de fondo */
+    background-image: url(''); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
