@@ -1,0 +1,672 @@
+<html>
+
+<head>
+	<title>Gestion de Matricula</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../../assest/css/estilos.css" media="screen" />
+	<script type="text/javascript" src="../../../assest/java/scrip.js"></script>
+</head>
+
+<body>
+	<table width="80%" border="0" align="center" cellspacing="1" cellspacing="1">
+		<tr>
+			<th colspan="9" style="background-color:blue;color:white;font-weight:bold;height:24px">REGISTRAR MATRICULAS
+			</th>
+		</tr>
+		<tr>
+			<td colspan="9">
+				<table width="100%" border="0">
+					<td>
+						<input type="text" style="width:100%;font-size: 12px; border:1px #85C1E9 solid;"
+							placeholder="Ingrese: nombre del estudiante y el grado" />
+					</td>
+					<td align="right" style="width:60px;font-size: 16px;font-weight: bold;">
+						<a id href="#">Buscar</a>
+					</td>
+				</table>
+			</td>
+		</tr>
+		<tr style="font-weight:bold;background: blue">
+			<td width="40">NO.</td>
+			<td>FECHA [dd-mm-aaaa]</td>
+			<td>ESTUDIANTE</td>
+			<td>GRADO</td>
+			<td>OPROBO O NO APROBO</td>
+			<td>JORNADA</td>
+			<td>ESTADO</td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td>1</td>
+			<td>19-08-2024</td>
+			<td>ANDRES DAVID ZUÑIGA MARTINEZ</td>
+			<td>1001</td>
+			<td>SI</td>
+			<td>MAÑANA</td>
+			<td>ACTIVA</td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td colspan="8">
+				|
+				<< &nbsp;&nbsp; < &nbsp; Página <input type="text" value="1" style="width:40px;" /> de 1 &nbsp; >
+				&nbsp;&nbsp; >>| Mostrando desde 1 a 10 de n
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="8" align="right">
+				<a href="#modalAgregar" style="text-decoration: none">
+					<input type="button" id="agregar" value="Agregar" class="boton" onclick="mostrarAgregar();" />
+				</a>
+
+				<a href="#modalMostrar" style="text-decoration: none">
+					<input type="button" id="mostrar" value="Mostrar" class="boton" />
+				</a>
+
+				<a href="#modalModificar" style="text-decoration: none">
+					<input type="button" id="modificar" value="Modificar" class="boton" />
+				</a>
+
+				<a href="#modalEliminar" style="text-decoration: none">
+					<input type="button" id="eliminar" value="Eliminar" class="boton" />
+				</a>
+			</td>
+		</tr>
+	</table>
+
+	<!--AGREGAR-->
+	<div id="modalAgregar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">REGISTRAR MATRICULA[AGREGAR]</th>
+				</tr>
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="date" id="fecha" /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estudiante">
+							<option value="">Seleccione el estudiante de la lista</option>
+							<option value="1">ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Grado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="Grado">
+							<option value="">Seleccione un grado de la lista</option>
+							<option value="1">1001</option>
+							<option value="2">1101</option>
+							<option value="3">901</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Aprobo o no Aprobo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="opcion">
+							<option value="">Seleccione una opcion de la lista</option>
+							<option value="1">SI</option>
+							<option value="2">NO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Institucion</td>
+					<td align="center">:</td>
+					<td>
+						<select id="institucion">
+							<option value="">Seleccione una institucion de la lista</option>
+							<option value="1">CARRASQUILA IDUSTRIAL</option>
+							<option value="2">MEGACOLAGIO MIA</option>
+							<option value="3">CAÑIZALES</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sede</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sede">
+							<option value="">Seleccione una sede de la lista</option>
+							<option value="1">PRINCIPAL</option>
+							<option value="2">BUENOS AIRES</option>
+							<option value="3">MISESFUERZO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Jornada</td>
+					<td align="center">:</td>
+					<td>
+						<select id="jornada">
+							<option value="">Seleccione una jornada de la lista</option>
+							<option value="1">MAÑANA</option>
+							<option value="2">TARDE</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Estado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estado">
+							<option value="">Seleccione un estado de la lista</option>
+							<option value="1">ACTIVA</option>
+							<option value="2">CANCELADA</option>
+							<option value="3">SUSPENDIDA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_agregar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!--FIN AGREGAR-->
+
+	<!--MOSTRAR-->
+	<div id="modalMostrar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR MATRICULA [MOSTRAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="text" id="fecha" value="17-02-2024" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion" disabled>
+							<option value="">Seleccione un estudiante de la lista</option>
+							<option value="1" selected>ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Grado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="Grado" disabled>
+							<option value="">Seleccione un grado de la lista</option>
+							<option value="1" selected>1001</option>
+							<option value="2">1101</option>
+							<option value="3">901</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Aprobo o no Aprobo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="opcion" disabled>
+							<option value="">Seleccione una opcion de la lista</option>
+							<option value="1" selected>SI</option>
+							<option value="2">NO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Institucion</td>
+					<td align="center">:</td>
+					<td>
+						<select id="institucion" disabled>
+							<option value="">Seleccione una institucion de la lista</option>
+							<option value="1" selected>CARRASQUILA IDUSTRIAL</option>
+							<option value="2">MEGACOLAGIO MIA</option>
+							<option value="3">CAÑIZALES</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sede</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sede" disabled>
+							<option value="">Seleccione una sede de la lista</option>
+							<option value="1" selected>PRINCIPAL</option>
+							<option value="2">BUENOS AIRES</option>
+							<option value="3">MISESFUERZO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Jornada</td>
+					<td align="center">:</td>
+					<td>
+						<select id="jornada" disabled>
+							<option value="">Seleccione una jornada de la lista</option>
+							<option value="1" selected>MAÑANA</option>
+							<option value="2">TARDE</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Estado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estado" disabled>
+							<option value="">Seleccione un estado de la lista</option>
+							<option value="1" selected>ACTIVA</option>
+							<option value="2">CANCELADA</option>
+							<option value="3">SUSPENDIDA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MOSTRAR-->
+
+	<!--MODIFICAR-->
+	<div id="modalModificar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR MATRICULAS [MODIFICAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="text" id="fecha" value="17-02-2024" /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion">
+							<option value="">Seleccione un estudiante de la lista</option>
+							<option value="1" selected>ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Grado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="Grado">
+							<option value="">Seleccione un grado de la lista</option>
+							<option value="1" selected>1001</option>
+							<option value="2">1101</option>
+							<option value="3">901</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Aprobo o no Aprobo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="opcion">
+							<option value="">Seleccione una opcion de la lista</option>
+							<option value="1" selected>SI</option>
+							<option value="2">NO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Institucion</td>
+					<td align="center">:</td>
+					<td>
+						<select id="institucion" <option value="">Seleccione una institucion de la lista</option>
+							<option value="1" selected>CARRASQUILA IDUSTRIAL</option>
+							<option value="2">MEGACOLAGIO MIA</option>
+							<option value="3">CAÑIZALES</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sede</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sede">
+							<option value="">Seleccione una sede de la lista</option>
+							<option value="1" selected>PRINCIPAL</option>
+							<option value="2">BUENOS AIRES</option>
+							<option value="3">MISESFUERZO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Jornada</td>
+					<td align="center">:</td>
+					<td>
+						<select id="jornada">
+							<option value="">Seleccione una jornada de la lista</option>
+							<option value="1" selected>MAÑANA</option>
+							<option value="2">TARDE</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Estado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estado" <option value="">Seleccione un estado de la lista</option>
+							<option value="1" selected>ACTIVA</option>
+							<option value="2">CANCELADA</option>
+							<option value="3">SUSPENDIDA</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MODIFICAR-->
+
+	<!--ELIMINAR-->
+	<div id="modalEliminar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR PERSONAS [ELIMINAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="text" id="fecha" value="17-02-2024" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion" disabled>
+							<option value="">Seleccione un estudiante de la lista</option>
+							<option value="1" selected>ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Grado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="Grado" disabled>
+							<option value="">Seleccione un grado de la lista</option>
+							<option value="1" selected>1001</option>
+							<option value="2">1101</option>
+							<option value="3">901</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Aprobo o no Aprobo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="opcion" disabled>
+							<option value="">Seleccione una opcion de la lista</option>
+							<option value="1" selected>SI</option>
+							<option value="2">NO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Institucion</td>
+					<td align="center">:</td>
+					<td>
+						<select id="institucion" disabled>
+							<option value="">Seleccione una institucion de la lista</option>
+							<option value="1" selected>CARRASQUILA IDUSTRIAL</option>
+							<option value="2">MEGACOLAGIO MIA</option>
+							<option value="3">CAÑIZALES</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sede</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sede" disabled>
+							<option value="">Seleccione una sede de la lista</option>
+							<option value="1" selected>PRINCIPAL</option>
+							<option value="2">BUENOS AIRES</option>
+							<option value="3">MISESFUERZO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Jornada</td>
+					<td align="center">:</td>
+					<td>
+						<select id="jornada" disabled>
+							<option value="">Seleccione una jornada de la lista</option>
+							<option value="1" selected>MAÑANA</option>
+							<option value="2">TARDE</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Estado</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estado" disabled>
+							<option value="">Seleccione un estado de la lista</option>
+							<option value="1" selected>ACTIVA</option>
+							<option value="2">CANCELADA</option>
+							<option value="3">SUSPENDIDA</option>
+						</select>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN ELIMINAR-->
+
+</body>
+
+</html>

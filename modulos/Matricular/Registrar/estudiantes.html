@@ -1,0 +1,478 @@
+<html>
+
+<head>
+	<title>Gestion de Matricula</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../../assest/css/estilos.css" media="screen" />
+	<script type="text/javascript" src="../../../assest/java/scrip.js"></script>
+</head>
+
+<body>
+	<table width="80%" border="0" align="center" cellspacing="1" cellspacing="1">
+		<tr>
+			<th colspan="8" style="background-color:blue;color:white;font-weight:bold;height:24px">REGISTRAR ESTUDIANTES
+			</th>
+		</tr>
+		<tr>
+			<td colspan="8">
+				<table width="100%" border="0">
+					<td>
+						<input type="text" style="width:100%;font-size: 12px; border:1px #85C1E9 solid;"
+							placeholder="Ingrese: nombre del estudiante" />
+					</td>
+					<td align="right" style="width:60px;font-size: 16px;font-weight: bold;">
+						<a id href="#">Buscar</a>
+					</td>
+				</table>
+			</td>
+		</tr>
+		<tr style="font-weight:bold;background: blue">
+			<td width="40">NO.</td>
+			<td>ESTUDIANTE</td>
+			<td>DIRECCIÓN</td>
+			<td>PADRE</td>
+			<td>MADRE</td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td>1</td>
+			<td>ANDRES DAVID ZUÑIGA MARTINEZ</td>
+			<td>S. CILENCIA, B.SAN VICENTE #15</td>
+			<td>GONSALO ZUÑIGA</td>
+			<td>DARIS MARTINEZ</td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td colspan="8">
+				|
+				<< &nbsp;&nbsp; < &nbsp; Página <input type="text" value="1" style="width:40px;" /> de 1 &nbsp; >
+				&nbsp;&nbsp; >>| Mostrando desde 1 a 10 de n
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="8" align="right">
+				<a href="#modalAgregar" style="text-decoration: none">
+					<input type="button" id="agregar" value="Agregar" class="boton" onclick="mostrarAgregar();" />
+				</a>
+
+				<a href="#modalMostrar" style="text-decoration: none">
+					<input type="button" id="mostrar" value="Mostrar" class="boton" />
+				</a>
+
+				<a href="#modalModificar" style="text-decoration: none">
+					<input type="button" id="modificar" value="Modificar" class="boton" />
+				</a>
+
+				<a href="#modalEliminar" style="text-decoration: none">
+					<input type="button" id="eliminar" value="Eliminar" class="boton" />
+				</a>
+			</td>
+		</tr>
+	</table>
+
+	<!--AGREGAR-->
+	<div id="modalAgregar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">REGISTRAR ESTUDIANTES [AGREGAR]</th>
+				</tr>
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estudiante">
+							<option value="">Seleccione el estudiante de la lista</option>
+							<option value="1">ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sector</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sector">
+							<option value="">Seleccione un sector de la lista</option>
+							<option value="1">VALENCIA</option>
+							<option value="2">ARANGO</option>
+							<option value="3">CAVAS</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Padre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="padre">
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1">GONSALO ZUÑIGA</option>
+							<option value="2">VICTOR ROQUE</option>
+							<option value="3">HECTOR PEREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Madre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="madre">
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1">DARIS MARTINEZ</option>
+							<option value="2">MARTHA RAMIREZ</option>
+							<option value="3">SECRE HERMANDEZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_agregar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!--FIN AGREGAR-->
+
+	<!--MOSTRAR-->
+	<div id="modalMostrar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR ESTUDIANTE [MOSTRAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estudiante" disabled>
+							<option value="">Seleccione un estudiante de la lista</option>
+							<option value="1" selected>ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sector</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sector" disabled>
+							<option value="">Seleccione un sector de la lista</option>
+							<option value="1" selected>VALENCIA</option>
+							<option value="2">ARANGO</option>
+							<option value="3">CAVAS</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Padre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="padre" disabled>
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1" selected>GONSALO ZUÑIGA</option>
+							<option value="2">VICTOR ROQUE</option>
+							<option value="3">HECTOR PEREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Madre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="madre" disabled>
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1" selected>DARIS MARTINEZ</option>
+							<option value="2">MARTHA RAMIREZ</option>
+							<option value="3">SECRE HERMANDEZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MOSTRAR-->
+
+	<!--MODIFICAR-->
+	<div id="modalModificar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR ESTUDIANTES [MODIFICAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estudiante">
+							<option value="">Seleccione un estudiante de la lista</option>
+							<option value="1" selected>ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>Sector</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sector">
+							<option value="">Seleccione un sector de la lista</option>
+							<option value="1" selected>VALENCIA</option>
+							<option value="2">ARANGO</option>
+							<option value="3">CAVAS</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Padre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="padre">
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1" selected>GONSALO ZUÑIGA</option>
+							<option value="2">VICTOR ROQUE</option>
+							<option value="3">HECTOR PEREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Madre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="madre">
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1" selected>DARIS MARTINEZ</option>
+							<option value="2">MARTHA RAMIREZ</option>
+							<option value="3">SECRE HERMANDEZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MODIFICAR-->
+
+	<!--ELIMINAR-->
+	<div id="modalEliminar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR ESTUDIANTES [ELIMINAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+				<tr>
+					<td>Estudiante</td>
+					<td align="center">:</td>
+					<td>
+						<select id="estudiante" disabled>
+							<option value="">Seleccione un estudiante de la lista</option>
+							<option value="1" selected>ANDRES DAVID ZUÑIGA MARTINEZ</option>
+							<option value="2">EMILIO DE LA ROSA</option>
+							<option value="3">ALEJANDRO GUTIERREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Sector</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sector" disabled>
+							<option value="">Seleccione un sector de la lista</option>
+							<option value="1" selected>VALENCIA</option>
+							<option value="2">ARANGO</option>
+							<option value="3">CAVAS</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Padre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="padre" disabled>
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1" selected>GONSALO ZUÑIGA</option>
+							<option value="2">VICTOR ROQUE</option>
+							<option value="3">HECTOR PEREZ</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Madre</td>
+					<td align="center">:</td>
+					<td>
+						<select id="madre" disabled>
+							<option value="">Seleccione un nombre de la lista</option>
+							<option value="1" selected>DARIS MARTINEZ</option>
+							<option value="2">MARTHA RAMIREZ</option>
+							<option value="3">SECRE HERMANDEZ</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN ELIMINAR-->
+
+</body>
+
+</html>

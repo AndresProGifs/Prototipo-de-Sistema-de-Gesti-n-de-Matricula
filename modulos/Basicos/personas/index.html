@@ -1,0 +1,776 @@
+<html>
+
+<head>
+	<title>Gestion de Matricula</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../../assest/css/estilos.css" media="screen" />
+	<script type="text/javascript" src="../../../assest/java/scrip.js"></script>
+</head>
+
+<body>
+	<table width="80%" border="0" align="center" cellspacing="1" cellspacing="1">
+		<tr>
+			<th colspan="8" style="background-color:blue;color:white;font-weight:bold;height:24px">REGISTRAR PERSONAS
+				NATURALES Y JURÍDICAS</th>
+		</tr>
+		<tr>
+			<td colspan="8">
+				<table width="100%" border="0">
+					<td>
+						<input type="text" style="width:100%;font-size: 12px; border:1px #85C1E9 solid;"
+							placeholder="Ingrese: nombre, apellidos, identificación, teléfono, correo electrónico" />
+					</td>
+					<td align="right" style="width:60px;font-size: 16px;font-weight: bold;">
+						<a id href="#">Buscar</a>
+					</td>
+				</table>
+			</td>
+		</tr>
+		<tr style="font-weight:bold;background: blue">
+			<td width="40">NO.</td>
+			<td>IDENTIFICACIÓN</td>
+			<td>NOMBRE</td>
+			<td>PRIMER APELLIDO</td>
+			<td>SEGUNDO APELLIDO</td>
+			<td>DIRECCIÓN</td>
+			<td>TELEFONO</td>
+			<td>CORREO</td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td>1</td>
+			<td>1193420407</td>
+			<td>ANDRES DAVID</td>
+			<td>ZUÑIGA</td>
+			<td>MARTINEZ</td>
+			<td>B. SAN VICENTE # 15</td>
+			<td>3212968533</td>
+			<td>ANDRES.ZUNIGAM407@UTCH.EDU.CO</td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold;background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<tr style="font-weight:bold; background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td colspan="8">
+				|
+				<< &nbsp;&nbsp; < &nbsp; Página <input type="text" value="1" style="width:40px;" /> de 1 &nbsp; >
+				&nbsp;&nbsp; >>| Mostrando desde 1 a 10 de n
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="8" align="right">
+				<a href="#modalAgregar" style="text-decoration: none">
+					<input type="button" id="agregar" value="Agregar" class="boton" onclick="mostrarAgregar();" />
+				</a>
+
+				<a href="#modalMostrar" style="text-decoration: none">
+					<input type="button" id="mostrar" value="Mostrar" class="boton" />
+				</a>
+
+				<a href="#modalModificar" style="text-decoration: none">
+					<input type="button" id="modificar" value="Modificar" class="boton" />
+				</a>
+
+				<a href="#modalEliminar" style="text-decoration: none">
+					<input type="button" id="eliminar" value="Eliminar" class="boton" />
+				</a>
+			</td>
+		</tr>
+	</table>
+
+	<!--AGREGAR-->
+	<div id="modalAgregar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">REGISTRAR PERSONAS [AGREGAR]</th>
+				</tr>
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="date" id="fecha" /></td>
+				</tr>
+
+				<tr>
+					<td>Número identific</td>
+					<td align="center">:</td>
+					<td><input type="text" id="identifica" /></td>
+				</tr>
+
+				<tr>
+					<td>Tipo identifición</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion">
+							<option value="">Seleccione un tipo de identificación de la lista</option>
+							<option value="1">CÉDULA DE CIUDADANÍA</option>
+							<option value="2">TARJETA DE IDENTIDAD</option>
+							<option value="3">CÉDULA DE EXTRANGERÍA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Municipio de expedicón</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioEspedicion">
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1">QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Primer nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre1" /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre2" /></td>
+				</tr>
+
+				<tr>
+					<td>Primer apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido1" /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido2" /></td>
+				</tr>
+
+				<tr>
+					<td>Sexo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sexo">
+							<option value="">Seleccione un sexo de la lista</option>
+							<option value="1">MASCULINO</option>
+							<option value="2">FEMENINO</option>
+							<option value="3">NO APLICA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Dirección</td>
+					<td align="center">:</td>
+					<td><input type="text" id="sexo_id" /></td>
+				</tr>
+
+				<tr>
+					<td>Municipio residencia</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioResidencia">
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1">QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Teléfono</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefono" /></td>
+				</tr>
+
+				<tr>
+					<td>Teléfono alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefonoAlternativo" /></td>
+				</tr>
+
+				<tr>
+					<td>Correo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correo" /></td>
+				</tr>
+
+				<tr>
+					<td>Correo alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correoAlternativo" /></td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_agregar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!--FIN AGREGAR-->
+
+	<!--MOSTRAR-->
+	<div id="modalMostrar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR PERSONAS [MOSTRAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="text" id="fecha" value="17-08-2003" disabled /></td>
+				</tr>
+				<tr>
+					<td>Número identific</td>
+					<td align="center">:</td>
+					<td><input type="text" id="identifica" value="1133629039" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Tipo identifición</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion" disabled>
+							<option value="">Seleccione un tipo de identificación de la lista</option>
+							<option value="1" selected>CÉDULA DE CIUDADANÍA</option>
+							<option value="2">TARJETA DE IDENTIDAD</option>
+							<option value="3">CÉDULA DE EXTRANGERÍA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Municipio de expedicón</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioEspedicion" disabled>
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1" selected>QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Primer nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre1" value="FRANKLIN" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre2" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Primer apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido1" value="MOSQUERA" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido2" value="BLANDON" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Sexo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sexo" disabled>
+							<option value="">Seleccione un sexo de la lista</option>
+							<option value="1" selected>MASCULINO</option>
+							<option value="2">FEMENINO</option>
+							<option value="3">NO APLICA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Dirección</td>
+					<td align="center">:</td>
+					<td><input type="text" id="sexo_id" value="B. REPOSO #2" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Municipio residencia</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioResidencia" disabled>
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1" selected>QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Teléfono</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefono" value="3122693571" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Teléfono alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefonoAlternativo" value="3105073935" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Correo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correo" value="franklin2mosquera@gmail.com" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Correo alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correoAlternativo" value="franklin2mosquera@gmail.com" disabled /></td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MOSTRAR-->
+
+	<!--MODIFICAR-->
+	<div id="modalModificar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR PERSONAS [MODIFICAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="text" id="fecha" value="17-08-2003" /></td>
+				</tr>
+				<tr>
+					<td>Número identific</td>
+					<td align="center">:</td>
+					<td><input type="text" id="identifica" value="1133629039" /></td>
+				</tr>
+
+				<tr>
+					<td>Tipo identifición</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion">
+							<option value="">Seleccione un tipo de identificación de la lista</option>
+							<option value="1" selected>CÉDULA DE CIUDADANÍA</option>
+							<option value="2">TARJETA DE IDENTIDAD</option>
+							<option value="3">CÉDULA DE EXTRANGERÍA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Municipio de expedicón</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioEspedicion">
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1" selected>QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Primer nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre1" value="FRANKLIN" /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre2" /></td>
+				</tr>
+
+				<tr>
+					<td>Primer apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido1" value="MOSQUERA" /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido2" value="BLANDON" /></td>
+				</tr>
+
+				<tr>
+					<td>Sexo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sexo">
+							<option value="">Seleccione un sexo de la lista</option>
+							<option value="1" selected>MASCULINO</option>
+							<option value="2">FEMENINO</option>
+							<option value="3">NO APLICA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Dirección</td>
+					<td align="center">:</td>
+					<td><input type="text" id="sexo_id" value="B. REPOSO ·2" /></td>
+				</tr>
+
+				<tr>
+					<td>Municipio residencia</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioResidencia">
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1" selected>QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Teléfono</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefono" value="3122693571" /></td>
+				</tr>
+
+				<tr>
+					<td>Teléfono alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefonoAlternativo" value="3105073935" /></td>
+				</tr>
+
+				<tr>
+					<td>Correo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correo" value="franklin2mosquera@gmail.com" /></td>
+				</tr>
+
+				<tr>
+					<td>Correo alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correoAlternativo" value="efranklin2mosquera@gmail.com" /></td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MODIFICAR-->
+
+	<!--ELIMINAR-->
+	<div id="modalEliminar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 10px;">
+				<tr>
+					<th colspan="3">REGISTRAR PERSONAS [ELIMINAR]</th>
+				</tr>
+
+				<tr>
+					<td width="130">Id</td>
+					<td width="10" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" value="1" /></td>
+				</tr>
+				<tr>
+					<td>Fecha</td>
+					<td align="center">:</td>
+					<td><input type="text" id="fecha" value="17-08-2003" disabled /></td>
+				</tr>
+				<tr>
+					<td>Número identific</td>
+					<td align="center">:</td>
+					<td><input type="text" id="identifica" value="1133629039" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Tipo identifición</td>
+					<td align="center">:</td>
+					<td>
+						<select id="tipoIdentificacion" disabled>
+							<option value="">Seleccione un tipo de identificación de la lista</option>
+							<option value="1" selected>CÉDULA DE CIUDADANÍA</option>
+							<option value="2">TARJETA DE IDENTIDAD</option>
+							<option value="3">CÉDULA DE EXTRANGERÍA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Municipio de expedicón</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioEspedicion" disabled>
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1" selected>QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Primer nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre1" value="FRANKLIN" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo nombre</td>
+					<td align="center">:</td>
+					<td><input type="text" id="nombre2" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>Primer apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido1" value="MOSQUERA" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Segundo apellido</td>
+					<td align="center">:</td>
+					<td><input type="text" id="apellido2" value="BLANDON" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Sexo</td>
+					<td align="center">:</td>
+					<td>
+						<select id="sexo" disabled>
+							<option value="">Seleccione un sexo de la lista</option>
+							<option value="1" selected>MASCULINO</option>
+							<option value="2">FEMENINO</option>
+							<option value="3">NO APLICA</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Dirección</td>
+					<td align="center">:</td>
+					<td><input type="text" id="sexo_id" value="B. REPOSO #2" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Municipio residencia</td>
+					<td align="center">:</td>
+					<td>
+						<select id="municipioResidencia" disabled>
+							<option value="">Seleccione un municipio de la lista</option>
+							<option value="1" selected>QUIBDÓ</option>
+							<option value="2">ISTMINA</option>
+							<option value="3">RIOSUCIO</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Teléfono</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefono" value="3122693571" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Teléfono alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="telefonoAlternativo" value="3105073935" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Correo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correo" value="franklin2mosquera@gmail.com" disabled /></td>
+				</tr>
+
+				<tr>
+					<td>Correo alternativo</td>
+					<td align="center">:</td>
+					<td><input type="text" id="correoAlternativo" value="franklin2mosquera@gmail.com" disabled /></td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" class="boton" onclick="f_modificar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" class="boton" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN ELIMINAR-->
+
+</body>
+
+</html>

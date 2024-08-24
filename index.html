@@ -1,0 +1,67 @@
+<html>
+
+<head>
+	<title>Gestion de Matricula</title>
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assest/css/principal.css" media="screen" />
+	<link rel="stylesheet" href="assest/css/estilo_login.css">
+	<link rel="stylesheet" href="assest/css/stilo2.css">
+	<link rel="shortcut icon" href="assest/img/logo.jpg" type="image/x-icon" />
+</head>
+
+<body>
+	<header style="background-color: #0E8BF1; padding: 10px 0; color: white; text-align: center;">
+		<div
+			style="display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto;">
+			<img src="/assest/img/logo.jpg" height="75" alt="Logo Institución" class="img-redondeada">
+			<div style="font-size: 16px;">
+				<strong>Gestión de Matrículas</strong><br>
+				Institución Educativa Isaac Rodriguez Martinez
+			</div>
+		</div>
+	</header>
+
+	<div style="background: #000; border:1px #2867db solid;">
+		<div style="margin:0 auto; border:0px green solid; width:100%;background: #000;">
+			<nav id="menu" style="border:0px #000 solid;text-align: center;font-size:13px;">
+
+				<ul class="nav">
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div style="width:100%;border:0px red solid">
+		<br />
+		<br />
+		<br />
+		<div class="login-container">
+			<h2>INICIO DE SESION</h2>
+			<form id="login-form" method="post" action="modulos/menu/index.html" target="_top">
+				<div class="form-group">
+					<label for="username">Usuario:</label>
+					<input type="text" id="username" name="username">
+				</div>
+				<div class="form-group">
+					<label for="password">Contraseña:</label>
+					<input type="password" id="password" name="password">
+				</div>
+				<button type="submit" id="aceptar" name="aceptar" value="Aceptar">Iniciar Sesión</button>
+			</form>
+			<br>
+			<p id="datos" class="datos"> Usuario: 999, Contraseña: 123</p>
+			<p id="error-message" class="error-message"></p>
+		</div>
+	</div>
+	
+
+	<footer class="pie">
+		<p>Derechos reservados Gestión de Matrícula<br>Quibdó, Chocó (Colombia)<br>Institución Educativa: Isaac
+			Rodriguez Martinez.</p>
+	</footer>
+
+	<script src="assest/java/scrip2.js"></script>
+</body>
+
+</html>
