@@ -4,43 +4,310 @@
 	<title>Gestion de Matricula</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../../../assest/css/estilos.css" media="screen" />
+	<script type="text/javascript" src="../../../assest/java/scrip.js"></script>
 </head>
 
 <body>
-	<br /><br /><br />
-	<form method="GET" action="">
-		<table width="600" border="0" align="center" cellspacing="1" cellspacing="1">
+	<table width="80%" border="0" align="center" cellspacing="1" cellspacing="1">
+		<tr>
+			<th colspan="3" style="background-color:rgba(19, 98, 216, 0.95);color:white;font-weight:bold;height:24px">PERMISOS POR ROL</th>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<table width="100%" border="0">
+					<td>
+						<input type="text" style="width:100%;font-size: 12px; border:1px #5DADE2 solid;" />
+					</td>
+					<td align="right" style="width:60px;font-size: 16px;font-weight: bold;">
+						<a id href="#">Buscar</a>
+					</td>
+				</table>
+			</td>
+		</tr>
+		<tr style="font-weight:bold;background: rgba(19, 98, 216, 0.95)">
+			<td width="40">NO.</td>
+			<td width="400">ROL</td>
+			<td>PERMISOS</td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td>1</td>
+			<td>ADMINISTRADOR</td>
+			<td>BASICOS/PAÍSES</td>
+		</tr>
+		<tr style="background: #85C1E9">
+			<td>2</td>
+			<td>ADMINISTRADOR</td>
+			<td>MATRICULAR/RESGISTRAR MATRICULA</td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td>3</td>
+			<td>ADMINISTRADOR</td>
+			<td>MATRICULAR/IMPRIMRI MATRICULA</td>
+		</tr>
+		<tr style="background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #85C1E9">
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr style="background: #5DADE2">
+			<td colspan="3">
+				|
+				<< &nbsp;&nbsp; < &nbsp; Página <input type="text" value="1" style="width:40px;" /> de 1 &nbsp; >
+				&nbsp;&nbsp; >>| Mostrando desde 1 a 10 de n
+			</td>
+		</tr>
+
+		<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
 			<tr>
-				<th style="background-color:rgba(19, 98, 216, 0.95);color:white;font-weight:bold;height:24px">ACERCA DE GESTION DE
-					MATRICULA</th>
-			</tr>
-			<tr>
-				<th style="background-color:white;color:white;font-weight:bold;height:5px"></th>
-			</tr>
-
-			<tr>
-				<td style="text-align: justify;">
-
-					<p>Este producto fue desarrollado con en fin de atender las necesidades de un sistema de gestion de
-						matriculas para la <b>INSTITUCION EDUCATIVA ISAAC RODRIGUEZ MARTINEZ</b> ya que actualmente
-						no cuentan con un sistema, que permita realizar este tipo de actividad.</p>
-
-					<p>Se autoriza su uso en la <b>INSTIRUCION EDUCATIVA ISAAC RODRIGUEZ MARTINEZ</b> de la ciudad de
-						Quibdó, sin dederechos de ventas y/o reproducción total o parcial.</p>
-
-					<p style="text-align: center;background: rgba(19, 98, 216, 0.95);color:white;">
-						Derechos Reservados del equipo desarrollador.<br /><br />
-
-						Quibdó, Chocó (Colombia)
-
-					</p>
-
+				<td colspan="3" align="right">
+					<div class="button-group">
+						<a href="#modalAgregar">
+							<button id="agregar" onclick="mostrarAgregar();">Agregar</button>
+						</a>
+						<a href="#modalMostrar">
+							<button id="mostrar">Mostrar</button>
+						</a>
+						<a href="#modalModificar">
+							<button id="modificar">Modificar</button>
+						</a>
+						<a href="#modalEliminar">
+							<button id="eliminar">Eliminar</button>
+						</a>
+					</div>
 				</td>
 			</tr>
 		</table>
-	</form>
+	</table>
+
+	<!--AGREGAR-->
+
+	<div id="modalAgregar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">PERMISOS POR ROL [AGREGAR]</th>
+				</tr>
+
+				<tr>
+					<td width="60">Id</td>
+					<td width="20" align="center">:</td>
+					<td><input type="text" id="id" disabled="disabled" /></td>
+				</tr>
+
+				<tr>
+					<td>ROL</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="rol" style="width:100%">
+							<option value="1">ADMINISTRADOR</option>
+							<option value="2">ESTUDIANTE</option>
+							<option value="3">PROFESOR@</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>UTILIDAD</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="utilidad" style="width:100%">
+							<option value="1">BÁSICOS/PAÍSES</option>
+							<option value="2">MATRICULAR/REGISTRAR MATRICULA</option>
+							<option value="3">MATRICULAR/IMPRIMIR MATRICULA</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" style="width:80px" onclick="f_agregar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" style="width:80px" />
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
+
+	<!--FIN AGREGAR-->
+
+	<!--MOSTRAR -->
+	<div id="modalMostrar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">PERMISOS POR ROL [MOSTRAR]</th>
+				</tr>
+				<tr>
+					<td width="60">Id</td>
+					<td width="20" align="center">:</td>
+					<td><input type="text" id="id" value="1" disabled="disabled" /></td>
+				</tr>
+				<tr>
+					<td>ROL</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="rol" style="width:100%" disabled="disabled">
+							<option value="1">ADMINISTRADOR</option>
+							<option value="2">ESTUDIANTE</option>
+							<option value="3">PROFESOR@</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>UTILIDAD</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="utilidad" style="width:100%" disabled="disabled">
+							<option value="1">BÁSICOS/PAÍSES</option>
+							<option value="2">MATRICULAR/REGISTRAR MATRICULA</option>
+							<option value="3">MATRICULAR/IMPRIMIR MATRICULA</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" style="width:80px" />
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
+	<!--FIN MOSTRAR-->
+
+	<!--MODIFICAR-->
+	<div id="modalModificar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">PERMISOS POR ROL [MODIFICAR]</th>
+				</tr>
+				<tr>
+					<td width="60">Id</td>
+					<td width="20" align="center">:</td>
+					<td><input type="text" id="id" value="1" disabled="disabled" /></td>
+				</tr>
+				<tr>
+					<td>ROL</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="rol" style="width:100%">
+							<option value="1">ADMINISTRADOR</option>
+							<option value="2">ESTUDIANTE</option>
+							<option value="3">PROFESOR@</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>UTILIDAD</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="utilidad" style="width:100%">
+							<option value="1">BÁSICOS/PAÍSES</option>
+							<option value="2">MATRICULAR/REGISTRAR MATRICULA</option>
+							<option value="3">MATRICULAR/IMPRIMIR MATRICULA</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" style="width:80px" onclick="f_modificar();" />
+
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" style="width:80px" />
+						</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN MODIFICAR-->
+
+	<!--ELIMINAR-->
+	<div id="modalEliminar" class="modalDialog">
+		<div>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<th colspan="3">PERMISOS POR ROL [ELIMINAR]</th>
+				</tr>
+				<tr>
+					<td width="60">Id</td>
+					<td width="20" align="center">:</td>
+					<td><input type="text" id="id" value="1" disabled="disabled" /></td>
+				</tr>
+				<tr>
+					<td>ROL</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="rol" style="width:100%" disabled="disabled">
+							<option value="1">ADMINISTRADOR</option>
+							<option value="2">ESTUDIANTE</option>
+							<option value="3">PROFESOR@</option>
+						</Select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>UTILIDAD</td>
+					<td align="center">:</td>
+					<td>
+						<Select id="utilidad" style="width:100%" disabled="disabled">
+							<option value="1">BÁSICOS/PAÍSES</option>
+							<option value="2">MATRICULAR/REGISTRAR MATRICULA</option>
+							<option value="3">MATRICULAR/IMPRIMIR MATRICULA</option>
+						</Select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="right">
+						<input type="button" id="aceptar" value="Aceptar" style="width:80px" onclick="f_eliminar();" />
+
+						<a href="#close" title="Close" class="close">
+							<input type="button" id="aceptar" value="Cerrar" style="width:80px" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!--FIN ELIMINAR-->
+
 </body>
 
 </html>
