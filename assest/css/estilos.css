@@ -1,27 +1,50 @@
-td,th {
-    font-family:Arial, Helvetica, sans-serif;
+/* Estilo general de botones */
+.button-group button {
+    width: 100px;
+    background-color: #0E8BF1; /* Color similar al navbar */
+    color: white;
+    border: none;
+    padding: 6px;
+    margin: 4px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.button-group{
+    position: relative; /* El contenedor debe ser relativo */
+    width: 100%;
+    left: -9.5%; 
+}
+
+.button-group button:hover {
+    background-color: #1d3956; /* Efecto al pasar el mouse */
+}
+
+/* Estilo para los enlaces que contienen los botones */
+.button-group a {
+    text-decoration: none;
+}
+
+/* Mantiene la consistencia de la fuente y el tamaño */
+td, th {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     height: 16px;
-    color:black;
-    }
+    color: black;
+}
 
-input,select {width:100%;border:1px black solid;}
-
-.boton {
-    width:100px;
+input, select {
+    width: 100%;
+    border: 1px solid black;
 }
 
 a {
     text-decoration: none;
-
 }
- /* CODIGO PARA LA VENTANA FLOTANTE */
 
- #modalAgregar, #modalMostrar, #modalModificar, #modalEliminar 
- {
- /*visibility:hidden;*/
- }
-
+/* Estilo de la ventana flotante (modal) */
 .modalDialog {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,62 +52,41 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
-    opacity:0;
-    -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
+    opacity: 0;
     transition: opacity 400ms ease-in;
     pointer-events: none;
     border-radius: 5px;
-    }
+}
 
 .modalDialog:target {
-    visibility:visible;
-    opacity:1;
+    visibility: visible;
+    opacity: 1;
     pointer-events: auto;
+}
 
-    }
-    
 .modalDialog > div {
-
     width: 450px;
     position: relative;
     margin: 10% auto;
     padding: 5px 10px 10px 10px;
     border-radius: 10px;
-    /* Fondo */
-    background:line-height #c50505;
-    background: -moz-linear-gradient(#fff, #aaa);
-    background: -webkit-linear-gradient(#fff, #999);
-    background: -o-linear-gradient(#fff, #999);
-    /*Fin del fondo */
-  -webkit-transition: opacity 400ms ease-in;
-    -moz-transition: opacity 400ms ease-in;
+    background: linear-gradient(#fff, #999);
     transition: opacity 400ms ease-in;
-    visibility:visible;
-    }
+}
 
+/* Botón de cerrar la ventana modal */
 .close {
     background: #606061;
     color: #FFFFFF;
     line-height: 25px;
-    
-    /*
-    position: absolute;		
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 24px;
-    */
-
     text-decoration: none;
     font-weight: bold;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
     border-radius: 12px;
-    -moz-box-shadow: 1px 1px 3px #000;
-    -webkit-box-shadow: 1px 1px 3px #000;
     box-shadow: 1px 1px 3px #000;
-    }
-.close:hover { background: #00d9ff; }
+}
+
+.close:hover {
+    background: #00d9ff;
+}
