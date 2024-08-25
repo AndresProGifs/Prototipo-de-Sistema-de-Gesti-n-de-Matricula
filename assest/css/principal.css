@@ -121,12 +121,14 @@ iframe {
 }
 
 .pie {
-    background-color: #0E8BF1;
-    color: white;
+    background-color: #0E8BF1; /* Conserva el color original */
+    color: white; /* Conserva el color de texto original */
     text-align: center;
-    padding: 10px 0;
+    padding: 24px 0; /* Ajuste del padding según el archivo adjunto */
     font-size: 14px;
     margin-top: 20px;
+    width: 100%;
+    min-height: 100px; /* Ajuste de la altura mínima según el archivo adjunto */
 }
 
 @media (max-width: 768px) {
