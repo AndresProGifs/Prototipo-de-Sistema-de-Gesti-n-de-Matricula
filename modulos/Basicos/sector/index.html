@@ -11,7 +11,8 @@
 <body>
 	<table width="80%" border="0" align="center" cellspacing="1" cellspacing="1">
 		<tr>
-			<th colspan="3" style="background-color:blue;color:white;font-weight:bold;height:24px">SECTORES</th>
+			<th colspan="3" style="background-color:rgba(19, 98, 216, 0.95); color:white;font-weight:bold;height:24px">
+				SECTORES</th>
 		</tr>
 		<tr>
 			<td colspan="8">
@@ -25,7 +26,7 @@
 				</table>
 			</td>
 		</tr>
-		<tr style="font-weight:bold;background: blue">
+		<tr style="font-weight:bold;background: rgba(19, 98, 216, 0.95)">
 			<td width="40">NO.</td>
 			<td width="400">SECTOR</td>
 			<td>BARRIO/MUNICIPIO/DEPARTAMENTO/PAÍS</td>
@@ -89,24 +90,26 @@
 		</tr>
 
 		<tr>
-			<td colspan="3" align="right">
-				<a href="#modalAgregar" style="text-decoration: none">
-					<input type="button" id="agregar" value="Agregar" style="width:100px" onclick="mostrarAgregar();" />
-				</a>
-
-				<a href="#modalMostrar" style="text-decoration: none">
-					<input type="button" id="mostrar" value="Mostrar" style="width:100px" />
-				</a>
-
-				<a href="#modalModificar" style="text-decoration: none">
-					<input type="button" id="modificar" value="Modificar" style="width:100px" />
-				</a>
-
-				<a href="#modalEliminar" style="text-decoration: none">
-					<input type="button" id="eliminar" value="Eliminar" style="width:100px" />
-				</a>
-			</td>
-		</tr>
+			<table width="100%" border="0" cellspacing="0" style="font-size: 12px;">
+				<tr>
+					<td colspan="3" align="right">
+						<div class="button-group">
+							<a href="#modalAgregar">
+								<button id="agregar" onclick="mostrarAgregar();">Agregar</button>
+							</a>
+							<a href="#modalMostrar">
+								<button id="mostrar">Mostrar</button>
+							</a>
+							<a href="#modalModificar">
+								<button id="modificar">Modificar</button>
+							</a>
+							<a href="#modalEliminar">
+								<button id="eliminar">Eliminar</button>
+							</a>
+						</div>
+					</td>
+				</tr>
+			</table>
 	</table>
 
 	<!--AGREGAR-->
